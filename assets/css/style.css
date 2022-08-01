@@ -51,13 +51,17 @@ form input {
     width: 70%;
     background-color: rgb(240, 240, 240);
     height: 40px;
-    font-size: 16px;
+    font-size: 12px;
+    padding-left: 8px;
     border: 0.8px solid rgb(190, 190, 190);
 }
 
+
+/*
 form input::placeholder {
     padding-left: 15px;
 }
+*/
 
 #button {
     width: 100%;
@@ -124,8 +128,15 @@ strong a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-family: mistral;
     font-size: 30px;
+}
+
+.rede_social p {
+    color: red;
+    font-family: times new roman;
+    font-size: 10px;
 }
 
 strong img {
