@@ -29,7 +29,15 @@
                 <li><a href=""><img src="../assets/images/svg/facebook.svg" alt=""></a></li>
                 <li><a href=""><img src="../assets/images/svg/informacoes.svg" alt=""></a></li>
                 <li><a href=""><img src="../assets/images/svg/like-svgrepo-com.svg" alt=""></a></li>
-                <li><a href="../action/logout.php"><img src="../assets/images/svg/menu-hamburguer.svg" alt=""></a></li>
+                <li class="z-index"><a href="../action/logout.php"><img src="../assets/images/svg/menu-hamburguer.svg" alt=""></a></li>
             </ul>
+            <!--
+            <div class="index">
+                <button>x</button>
+                ola tudo bem?
+            </div>
+            -->
         </div>
     </header>
+
+    

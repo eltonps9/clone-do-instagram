@@ -10,7 +10,70 @@ body {
     background-color: rgb(173, 226, 86);
 }
 
-.post {
+.container {
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     top: 80px;
+}
+
+
+/* postagem feita*/
+
+.post {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(163, 161, 165);
+}
+
+.post>.infor {
+    width: 100%;
+    background-color: rgb(129, 99, 160);
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post>.infor>.img {
+    width: 60px;
+    background-color: rgb(12, 4, 20);
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.post>.infor>.img>img {
+    width: 100%;
+    background-color: rgb(12, 4, 20);
+    height: 100%;
+    border-radius: 50%;
+}
+
+.post>.postagem {
+    width: 100%;
+    background-color: rgb(219, 203, 235);
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post>.entreter {
+    width: 100%;
+    background-color: rgb(100, 25, 175);
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
