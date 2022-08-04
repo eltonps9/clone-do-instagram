@@ -13,14 +13,14 @@
                 <div class="pontos">.</div>
             </div>
         </div>
-        <div class="postagem">
-            <img src="" alt="postagem ">
-        </div>
+        
+        <img class="postagem" src="../assets/images/mao.jpg" alt="postagem ">
+        
         <div class="entreter">
             <div class="like_coment">
-                <img src="" alt="like">
-                <img src="" alt="comentario">
-                <img src="" alt="enviar">
+                <img src="../assets/images/svg/like-svgrepo-com.svg" alt="like">
+                <img src="../assets/images/svg/menu-hamburguer.svg" alt="comentario">
+                <img src="../assets/images/svg/informacoes.svg" alt="enviar">
             </div>
             <div class="coment_ver">
                 <p>comentarios</p>

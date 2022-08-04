@@ -25,19 +25,23 @@ session_start();
                 <strong>
                        CLONE INSTAGRAM
                 </strong>
+                
+                <?php
+                    if(isset($_SESSION['aviso'])):
+                ?>
                     <p>
-                        <?php
-                        if(isset($_SESSION['aviso'])){
-                            echo $_SESSION['aviso'];
-                            $_SESSION['aviso']= " ";
-                        }
-                            
+                        <?=$_SESSION['aviso'];
+                        $_SESSION['aviso']= " ";
                         ?>
                     </p>
+                <?php
+                    endif;  
+                ?>
+               
             </div>
             <form action="./action/login_action.php" method="post">
                 <label for="infor"></label>
-                <input type="text" name="infor" id="infor" autofocus required placeholder="Telefone nome de usuário ou email">
+                <input type="text" name="infor" id="infor" autofocus required placeholder="Telefone ou email">
 
                 <br>
                 <label for="senha"></label>

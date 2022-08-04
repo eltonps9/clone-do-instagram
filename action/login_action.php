@@ -13,8 +13,8 @@ $token=md5(time(),50);
 
 if(isset($val_usuario) && isset($val_senha) ){
     //verificação do usuario
-    $sql=$pdo->prepare("SELECT * FROM login WHERE nome=:nome && senha=:senha");
-    $sql->bindValue(':nome',$val_usuario);
+    $sql=$pdo->prepare("SELECT * FROM login WHERE email=:email && senha=:senha");
+    $sql->bindValue(':email',$val_usuario);
     $sql->bindValue(':senha',$val_senha);
     $sql->execute();
 
@@ -29,8 +29,7 @@ if(isset($val_usuario) && isset($val_senha) ){
         header("Location:../pages/tela.php");
         exit;
     }else{
-        
-        $_SESSION['aviso']= "preencha as informações corretamente";
+        $_SESSION['aviso']= "Nenhum usuário encontrado ou informação errada, cadastre-se!";
     
         header("Location:../index.php");
         exit;

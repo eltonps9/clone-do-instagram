@@ -134,9 +134,12 @@ strong a {
 }
 
 .rede_social p {
+    width: 70%;
+    height: auto;
     color: red;
+    margin-top: 10px;
     font-family: times new roman;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 strong img {
