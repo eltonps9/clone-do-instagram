@@ -19,17 +19,17 @@ if(isset($nome) && isset($email) && isset($senha) && isset($usuario)){
     
 
     if($sql_sl->rowCount()==0){
-        $sql=$pdo->prepare("INSERT INTO login (nome, usuario, senha, email, token)VALUES(:nome,:usuario,:senha,:email,:token)");
+        $sql=$pdo->prepare("INSERT INTO login (nome, usuario, senha, email, token)VALUES(:nome,:usuario,:senha,:email, :token)");
         $sql->bindValue(':nome',$nome);
         $sql->bindValue(':usuario',$usuario);
+        $sql->bindValue(':token',$token);
         $sql->bindValue(':senha',$senha);
         $sql->bindValue(':email',$email);
-        $sql->bindValue(':token',$token);
         $sql->execute();
         
     
-        $_SESSION['token']=$token;
-        header("Location:../pages/tela.php");
+        $_SESSION['aviso_cad']="usuario cadastrado com sucesso";
+        header("Location:../index.php");
         exit;
     }else{
         $_SESSION['cad']="Email ou senha já existe! ";
@@ -37,4 +37,3 @@ if(isset($nome) && isset($email) && isset($senha) && isset($usuario)){
         exit;
     }
 }
-

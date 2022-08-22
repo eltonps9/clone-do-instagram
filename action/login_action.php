@@ -3,11 +3,11 @@ session_start();
 require_once "../config/connect.php";
 
 
-$val_usuario=filter_input(INPUT_POST, 'infor');
+$val_usuario=filter_input(INPUT_POST, 'usuario');
 $val_senha=filter_input(INPUT_POST, 'senha');
 
 // token a ser inserido no banco de dados
-$token=md5(time(),50);
+$token=md5(time(),15);
 
 
 
@@ -20,12 +20,13 @@ if(isset($val_usuario) && isset($val_senha) ){
 
     if($sql->rowCount()>0){
         //atualização do token
-        $sql_update=$pdo->prepare("UPDATE login SET token=:token WHERE nome=:nome ");
+        $sql_update=$pdo->prepare("UPDATE login SET token=:token WHERE email=:usuario ");
         $sql_update->bindValue('token',$token);
-        $sql_update->bindValue(':nome',$val_usuario);
+        $sql_update->bindValue(':usuario',$val_usuario);
         $sql_update->execute();
 
         $_SESSION['token']= $token;
+        $_SESSION['usuario']= $val_usuario;
         header("Location:../pages/tela.php");
         exit;
     }else{

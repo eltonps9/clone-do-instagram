@@ -1,3 +1,9 @@
+<?php
+require_once "../action/usuario.php";
+require_once "../action/comentarios.php";
+
+?>
+<meta content="charset=UTF-8">
 <link rel="stylesheet" href="../assets/css/body_style.css">
 
 <div class="container">
@@ -5,12 +11,14 @@
     <div class="post">
         <div class="infor">
             <div class="img">
-                <img src="../assets/images/facebook.jpg" alt="perfil">
+                <img src="../assets/images/<?=$user['foto'];?>" alt="perfil">
+
             </div>
+            <strong>
+            </strong>
             <div class="comp">
-                <div class="pontos">.</div>
-                <div class="pontos">.</div>
-                <div class="pontos">.</div>
+                <div class="pontos">-</div>
+                <div class="pontos">-</div>
             </div>
         </div>
         
@@ -23,11 +31,16 @@
                 <img src="../assets/images/svg/informacoes.svg" alt="enviar">
             </div>
             <div class="coment_ver">
-                <p>comentarios</p>
+                <p>
+                    comentarios....
+                </p>
+
             </div>
-            <div class="coment_post">
+            <form action="../action/comentarios.php?id=<?=$user['id'];?>" method="POST" class="coment_post">
+
                 <input type="text" name="comentario" id="comentario">
-            </div>
+                <input type="submit" value="comentar">
+            </form>
         </div>
     </div>
 </div>

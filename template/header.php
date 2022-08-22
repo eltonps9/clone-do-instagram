@@ -1,3 +1,9 @@
+<?php
+require_once "../config/connect.php";
+require_once "../action/usuario.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -26,18 +32,40 @@
         <div class="icones">
             <ul>
                 <li><a href="../pages/tela.php"><img src="../assets/images/svg/casa.svg" alt=""></a></li>
-                <li><a href=""><img src="../assets/images/svg/facebook.svg" alt=""></a></li>
-                <li><a href=""><img src="../assets/images/svg/informacoes.svg" alt=""></a></li>
-                <li><a href=""><img src="../assets/images/svg/like-svgrepo-com.svg" alt=""></a></li>
-                <li class="z-index"><a href="../action/logout.php"><img src="../assets/images/svg/menu-hamburguer.svg" alt=""></a></li>
+                <li  >
+                <button onclick="publicar()" class="public_header">+</button>    
+                </li>
+                <li><a href="../pages/perfil.php"><img src="../assets/images/svg/informacoes.svg" alt=""></a></li>
+                <li class="z-index" ><a href="../action/logout.php" onclick="menuconfig()"><img src="../assets/images/<?=$user['foto'];?>" alt="" id="img"></a></li>
             </ul>
-            <!--
-            <div class="index">
-                <button>x</button>
-                ola tudo bem?
-            </div>
-            -->
+            
         </div>
+        
     </header>
+
+
+     <!-- tela de publicação-->
+
+    <div id="public" >
+        <form action="../action/publicar.php" id="public--2" method="post">
+            <label for="arquivo" id="foto_ft" onclick="foto()"></label>
+            <input type="file" name="arquivo" accept="image/*" id="imagem" value="abrir">
+            <div class="enviar">
+                <input type="text" name="descricao" id="descricao">
+                <input type="submit" value="ok" id="submit">
+            </div>
+        </form>
+    <button onclick="publicar()" class="public_header" id="button-x">x</button>   
+
+    </div>
+
+    <!-- tela de configuração-->
+    <div id="menuconfig" >
+        
+
+    <button onclick="menuconfig()" class="menu_fechar" id="menu_fechar">x</button>   
+    </div>
+    <script src="../assets/js/script.js"></script>
+
 
     

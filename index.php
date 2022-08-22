@@ -38,10 +38,26 @@ session_start();
                     endif;  
                 ?>
                
+                <?php
+                    if(isset($_SESSION['aviso_cad'])):
+                ?>
+                    <strong style="color:green;font-size:18px;font-family:times new roman">
+                        <?=$_SESSION['aviso_cad'];
+                        $_SESSION['aviso_cad']= " ";
+                        ?>
+                    </strong>
+                <?php
+                    endif;  
+                ?>
+
+
+
+
+
             </div>
             <form action="./action/login_action.php" method="post">
-                <label for="infor"></label>
-                <input type="text" name="infor" id="infor" autofocus required placeholder="Telefone ou email">
+                <label for="usuario"></label>
+                <input type="text" name="usuario" id="infor" autofocus required placeholder="Telefone ou email">
 
                 <br>
                 <label for="senha"></label>
