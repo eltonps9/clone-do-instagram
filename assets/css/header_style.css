@@ -3,6 +3,7 @@
     padding: 0;
     color: black;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 header {
@@ -56,11 +57,22 @@ ul {
 ul li {
     list-style: none;
     margin-left: 15px;
+    cursor: pointer;
 }
 
-ul li a img {
+ul .z-index {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+ul li img {
     width: 25px;
     height: 25px;
+    border-radius: 50%;
 }
 
 ul li a #img {
@@ -114,7 +126,7 @@ ul li a #img {
     align-items: center;
 }
 
-form label {
+form .label {
     width: 200px;
     height: 200px;
     display: flex;
@@ -148,13 +160,180 @@ form #submit {
     height: 30px;
 }
 
+
+/* menu do usuario*/
+
 #menuconfig {
     z-index: 3;
-    width: 150px;
-    background-color: rgba(2, 2, 2, 0.911);
-    height: 200px;
+    width: 180px;
+    top: 60px;
+    position: relative;
+    right: 170px;
+    border-radius: 3px;
+    background-color: rgba(247, 245, 245, 0.911);
+    height: 130px;
     display: none;
+    border: 0.8px solid rgba(37, 37, 37, 0.815);
     position: fixed;
     justify-content: center;
     align-items: center;
+}
+
+#menuconfig ul {
+    height: auto;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    color: rgba(82, 81, 80, 0.842);
+    font-size: 15px;
+}
+
+#menuconfig ul li {
+    height: 30px;
+    width: 100%;
+    margin: 0;
+}
+
+#menuconfig ul li a {
+    height: 100%;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    margin-left: 10px;
+}
+
+#menuconfig ul li:hover {
+    background-color: rgba(240, 240, 240, 0.507);
+}
+
+
+/* menu de configuraçoes */
+
+#menu-config {
+    z-index: 4;
+    width: 150px;
+    top: 60px;
+    position: relative;
+    right: 180px;
+    border-radius: 3px;
+    background-color: rgba(247, 245, 245, 0.911);
+    height: 120px;
+    display: none;
+    border: 0.8px solid rgba(37, 37, 37, 0.815);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-config ul {
+    height: auto;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    color: rgba(82, 81, 80, 0.842);
+    font-size: 15px;
+}
+
+#menu-config ul li {
+    height: 30px;
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+}
+
+#menu-config ul li a {
+    height: 100%;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+}
+
+#menu-config ul li:hover {
+    background-color: rgba(240, 240, 240, 0.507);
+}
+
+#menu-config ul li #excluir:hover {
+    color: rgba(250, 0, 0, 0.658);
+}
+
+#menu-config ul li #editar:hover {
+    color: rgba(0, 250, 12, 0.658);
+}
+
+
+/* tela login */
+
+.login {
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+.login strong {
+    font-family: mistral;
+    font-size: 30px;
+    color: black;
+}
+
+.login p {
+    width: 70%;
+    height: auto;
+    color: red;
+    margin-top: 10px;
+    font-family: times new roman;
+    font-size: 13px;
+}
+
+.login form {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.986);
+}
+
+form #input {
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    background-color: rgb(113, 201, 252);
+}
+
+form input {
+    width: 70%;
+    background-color: rgb(240, 240, 240);
+    height: 40px;
+    font-size: 12px;
+    padding-left: 8px;
+    border: 0.8px solid rgb(190, 190, 190);
+}
+
+#off-login {
+    position: relative;
+    right: -170px;
+    top: -220px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: rgb(10, 10, 10);
+    border: 0;
+    font-size: 20px;
 }

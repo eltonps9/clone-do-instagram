@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    top: 70px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(238, 238, 238);
+}
+
+
+/* modelagem da area das informacoes*/
+
+.-header {
+    width: 100%;
+    height: 480px;
+    position: unset;
+    z-index: unset;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: unset;
+    border: 0px;
+}
+
+.container header nav {
+    width: 60%;
+    flex: 3;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+header nav .foto {
+    flex: 2;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .foto img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 50%;
+}
+
+header nav .infor {
+    flex: 3;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+header nav .infor .infor_usur {
+    width: 100%;
+    height: 50px;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+}
+
+header nav .infor .infor_publi {
+    height: 45px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+header nav .infor .infor_usur a {
+    width: 90px;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+header nav .infor .infor_usur a:hover {
+    border: 1px solid rgb(129, 129, 129);
+}
+
+header nav .infor .details {
+    width: 100%;
+    height: auto;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+}
+
+header nav .infor .details p {
+    max-width: 300px;
+}
+
+
+/* modelagem da area dos stores*/
+
+.container .store-fixed {
+    width: 57%;
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.container .store-fixed .store--fixeds {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(148, 148, 148);
+}
+
+
+/* modelagem da area das publicacoes*/
+
+.container .public {
+    width: 60%;
+    height: auto;
+    min-height: 400px;
+    background-color: aquamarine;
+}

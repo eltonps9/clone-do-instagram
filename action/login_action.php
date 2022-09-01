@@ -2,7 +2,7 @@
 session_start();
 require_once "../config/connect.php";
 
-
+    
 $val_usuario=filter_input(INPUT_POST, 'usuario');
 $val_senha=filter_input(INPUT_POST, 'senha');
 
@@ -10,9 +10,9 @@ $val_senha=filter_input(INPUT_POST, 'senha');
 $token=md5(time(),15);
 
 
-
 if(isset($val_usuario) && isset($val_senha) ){
-    //verificação do usuario
+        
+    //verificação do usuario 
     $sql=$pdo->prepare("SELECT * FROM login WHERE email=:email && senha=:senha");
     $sql->bindValue(':email',$val_usuario);
     $sql->bindValue(':senha',$val_senha);
@@ -36,6 +36,4 @@ if(isset($val_usuario) && isset($val_senha) ){
         exit;
     }
     
-    
 }
-

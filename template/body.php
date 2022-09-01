@@ -8,6 +8,7 @@ require_once "../action/comentarios.php";
 
 <div class="container">
     <!-- postagem feita -->
+    
     <div class="post">
         <div class="infor">
             <div class="img">
@@ -32,9 +33,12 @@ require_once "../action/comentarios.php";
             </div>
             <div class="coment_ver">
                 <p>
-                    comentarios....
+                   comentarios .....
                 </p>
 
+            </div>
+            <div>
+                <strong>Ainda em desenvolvimento</strong>
             </div>
             <form action="../action/comentarios.php?id=<?=$user['id'];?>" method="POST" class="coment_post">
 
@@ -42,5 +46,6 @@ require_once "../action/comentarios.php";
                 <input type="submit" value="comentar">
             </form>
         </div>
+        
     </div>
 </div>
