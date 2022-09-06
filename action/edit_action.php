@@ -5,19 +5,28 @@ require_once "../config/connect.php";
 
 $nome=filter_input(INPUT_POST,'nome');
 $infor=filter_input(INPUT_POST,'detalhes');
-$token=filter_input(INPUT_POST,'token');
+$id=filter_input(INPUT_GET,'id');
 
 
-if (isset($token)) {
+if (isset($id)) {
     
-    $sql=$pdo->prepare("UPDATE login SET  infor=:infor , nome=:nome WHERE token=:token");
-    $sql->bindValue(':nome',$nome);
-    $sql->bindValue(':infor',$infor);
-    $sql->bindValue(':token',$token);
+    $sql=$pdo->prepare("SELECT * FROM login WHERE id=:id");
+    $sql->bindValue(':id',$id);
     $sql->execute();
-    
-    header("Location:../pages/perfil.php");
-    exit;
+
+    if($sql->rowCount()!=0){
+        $sql=$pdo->prepare("UPDATE login SET  infor=:infor , nome=:nome WHERE id=:id");
+        $sql->bindValue(':nome',$nome);
+        $sql->bindValue(':infor',$infor);
+        $sql->bindValue(':id',$id);
+        $sql->execute();
+        
+        header("Location:../pages/perfil.php");
+        exit;
+    }else{ 
+        header("Location:../pages/editar_perfil.php");
+        exit;
+    }
     
 }else{ 
     header("Location:../pages/editar_perfil.php");

@@ -46,9 +46,8 @@ require_once "../action/usuario.php";
      <!-- tela de publicação-->
 
     <div id="public" >
-        <form action="../action/publicar.php" id="public--2" method="post">
+        <form action="../action/publicar.php?id=<?=$user['id'];?>" id="public--2" method="post"  enctype="multipart/form-data">
             <label class="label" for="arquivo" id="foto_ft" onclick="foto()"></label>
-            <input type="hidden" name="id" value="<?=$user['id'];?>" >
             <input type="file" name="arquivo" accept="image/*" id="imagem" value="abrir">
             <div class="enviar">
                 <input type="text" name="descricao" id="descricao">
