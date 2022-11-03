@@ -1,7 +1,6 @@
 <?php
+require_once "../action/usuario.php";                                              
 require_once "../config/connect.php";
-require_once "../action/usuario.php";
-
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +20,7 @@ require_once "../action/usuario.php";
             EPS-Clone_INSTAGRAM
         </div>
         <div class="pesq">
-            <form action="../action/pesquisar.php" class="pesq-2" method="post">
+            <form action="../template/body_pesquisa.php" class="pesq-2" method="post">
                 
                 <input type="search" name="pesq" class="pesq" placeholder="Pesquisar" >
                 

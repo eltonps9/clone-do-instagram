@@ -29,6 +29,8 @@ if(isset($val_usuario) && isset($val_senha) ){
         $_SESSION['usuario']= $val_usuario;
         header("Location:../pages/tela.php");
         exit;
+
+        
     }else{
         $_SESSION['aviso']= "Nenhum usuário encontrado ou informação errada, cadastre-se!";
     

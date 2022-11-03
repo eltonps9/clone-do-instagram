@@ -22,7 +22,7 @@ if($id && $_FILES){
         if($_FILES ){
             
             move_uploaded_file($_FILES['arquivo']['tmp_name'],"../assets/images/".$img);
-            header("Location:../pages/editar_perfil.php");
+            header("Location:../pages/tela.php");
             exit;
 
         }else{

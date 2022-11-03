@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require_once "../action/usuario.php";
 require_once "../template/header.php";
 ?>
@@ -10,7 +11,17 @@ require_once "../template/header.php";
     <header class="-header">
         <nav>
             <div class="foto">
-                <img src="../assets/images/<?=$user['foto'];?>" alt="minha foto">
+
+                <?php 
+                // fazer a função story
+                    $story= '1';
+                    
+                    if($story > 0):?>
+                        <button class="story"> <img src="../assets/images/<?=$user['foto'];?>" alt="minha foto" id="story"></button>
+                <?php else:?>
+                    <img src="../assets/images/<?=$user['foto'];?>" alt="minha foto">
+                <?php endif;?> 
+                
             </div>
             <div class="infor">
                 <div class="infor_usur">

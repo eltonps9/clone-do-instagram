@@ -35,6 +35,7 @@ body {
     border: 0.5px solid rgb(189, 189, 189);
     flex-direction: column;
     background-color: rgb(252, 248, 248);
+    margin-bottom: 20px;
 }
 
 .post>.infor {

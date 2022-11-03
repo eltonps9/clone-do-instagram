@@ -15,10 +15,9 @@ if($descricao && $_FILES){
 
     if($sql->rowCount()!=0){
         
-        $sql=$pdo->prepare("UPDATE login SET descr=:descr, post=:img WHERE id=:id");
+        $sql=$pdo->prepare("INSERT INTO postagem (descricao, post, id_post)VALUES (:descr, :img, :id) ");
         $sql->bindValue(':descr',$descricao);
-    $sql->bindValue(':id',$id);
-
+        $sql->bindValue(':id',$id);
         $sql->bindValue(':img',$img);
         $sql->execute();
 

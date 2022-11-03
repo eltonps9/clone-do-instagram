@@ -51,10 +51,26 @@ header nav .foto {
     align-items: center;
 }
 
+header nav .foto>.story>#story {
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    border: 6px solid rgb(25, 238, 42);
+}
+
+header nav .foto>.story {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    background-color: none;
+    cursor: pointer;
+    border: none;
+}
+
 header nav .foto img {
     width: 150px;
     height: 150px;
-    border: 1px solid rgb(148, 148, 148);
+    border: 0.5px solid rgb(148, 148, 148);
     border-radius: 50%;
 }
 

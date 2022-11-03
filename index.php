@@ -76,7 +76,7 @@ session_start();
 
                 <br>
                 <strong>
-                    <img src="./assets/images/facebook.jpg" alt="facebook ">
+                    <img src="./assets/images/svg/facebook.svg" alt="facebook ">
                     <a href="./pages/cad_aut.php ">Entrar com o facebook</a>
                 </strong>
                 <br>
